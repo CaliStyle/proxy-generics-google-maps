@@ -1,0 +1,18 @@
+'use strict'
+/* global describe, it */
+const assert = require('assert')
+describe('Geolocation Generic Google maps', () => {
+  let GeolocationGenericService
+  let GoogleMaps
+  before((done) => {
+    GeolocationGenericService = global.app.services.GeolocationGenericService
+    GoogleMaps = global.app.config.proxyGenerics.googleMaps
+    done()
+  })
+
+  it('should exist', () => {
+    assert(GeolocationGenericService)
+    assert(GoogleMaps)
+  })
+
+})
