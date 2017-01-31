@@ -18,7 +18,7 @@ module.exports = _.defaultsDeep({
       googleMaps: {
         adapter: require('../'),
         options: {
-          key: ''
+          key: process.env.GOOGLE_MAPS_KEY
         }
       }
     }
