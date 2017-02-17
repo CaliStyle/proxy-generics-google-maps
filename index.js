@@ -98,7 +98,7 @@ module.exports = class ProxyGenericsGoogleMaps {
         const proxySchema = address
         if (response.json && response.json.results.length > 0) {
           // Formatted Address
-          proxySchema.formated_address = response.json.results[0].formatted_address || formatedAddress
+          proxySchema.formatted_address = response.json.results[0].formatted_address || formatedAddress
           if (response.json.results[0].geometry && response.json.results[0].geometry.location) {
             proxySchema.latitude = response.json.results[0].geometry.location.lat
             proxySchema.longitude = response.json.results[0].geometry.location.lng
