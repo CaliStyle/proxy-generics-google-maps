@@ -88,9 +88,9 @@ module.exports = class ProxyGenericsGoogleMaps {
 
   locate(address) {
     return new Promise((resolve, reject) => {
-      const formatedAddress = this.addressToString(address)
+      const formattedAddress = this.addressToString(address)
       this.googleMaps().geocode({
-        address: formatedAddress
+        address: formattedAddress
       }, function(err, response) {
         if (err) {
           return reject(err)
@@ -98,12 +98,15 @@ module.exports = class ProxyGenericsGoogleMaps {
         const proxySchema = address
         if (response.json && response.json.results.length > 0) {
           // Formatted Address
-          proxySchema.formatted_address = response.json.results[0].formatted_address || formatedAddress
+          proxySchema.formatted_address = response.json.results[0].formatted_address || formattedAddress
           if (response.json.results[0].geometry && response.json.results[0].geometry.location) {
             proxySchema.latitude = response.json.results[0].geometry.location.lat
             proxySchema.longitude = response.json.results[0].geometry.location.lng
           }
           proxySchema.google_maps = response.json.results
+        }
+        else {
+          proxySchema.formatted_address = formattedAddress
         }
         return resolve(proxySchema)
       })

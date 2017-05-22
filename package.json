@@ -1,6 +1,6 @@
 {
   "name": "proxy-generics-google-maps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Proxy Generic Google Maps",
   "homepage": "https://cali-style.com",
   "author": {
@@ -23,14 +23,14 @@
     "@google/maps": "^0.3.1"
   },
   "devDependencies": {
-    "eslint": "^2.4",
-    "eslint-config-trails": "^2",
+    "eslint": "^3.19",
+    "eslint-config-trails": "^3",
     "lodash": "^4.11.1",
     "mocha": "^2.4.5",
-    "smokesignals": "v2-latest",
+    "smokesignals": "^2.0.0",
     "supertest": "^2.0.1",
-    "trailpack-proxy-generics": "^0.0.18",
-    "trails": "v2-latest"
+    "trailpack-proxy-generics": "^0.0.34",
+    "trails": "^2.0.0"
   },
   "scripts": {
     "test": "eslint . && mocha"

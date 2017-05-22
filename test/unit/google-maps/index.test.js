@@ -24,7 +24,7 @@ describe('Geolocation Generic Google maps', () => {
       country_code: 'US'
     }, GoogleMaps)
       .then(response => {
-        assert.equal(response.formated_address, '7875 N Alton Ave, Indianapolis, IN 46268, USA')
+        assert.equal(response.formatted_address, '7875 N Alton Ave, Indianapolis, IN 46268, USA')
         assert.equal(response.latitude, '39.8960269')
         assert.equal(response.longitude, '-86.21793199999999')
         assert.ok(response.google_maps)
