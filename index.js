@@ -81,8 +81,7 @@ module.exports = class ProxyGenericsGoogleMaps {
       province = `${province}, `
       country = `${country}`
     }
-    // const result = `${street}${city}${province}${postalCode}${country}`
-    // console.log(result)
+
     return `${street}${city}${province}${postalCode}${country}`
   }
 
