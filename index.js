@@ -107,6 +107,8 @@ module.exports = class ProxyGenericsGoogleMaps {
         }
         else {
           proxySchema.formatted_address = formattedAddress
+          proxySchema.latitude = 0
+          proxySchema.longitude = 0
         }
         return resolve(proxySchema)
       })
